@@ -1,0 +1,45 @@
+#-------------dubbo配置-------------
+dubbox: 
+  appName: bobo
+  address: 127.0.0.1:2181
+  protocalName: zookeeper
+  versions: 
+    - login  
+#-------------mvc视图配置-------------
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+  http:
+    multipart:
+      max-request-size: 2500MB  
+      max-file-size: 2500MB
+      
+#-------------core路由配置-------------
+route:
+  cfg:
+    cfg-list:
+      - core-name: login
+        packages:
+          - com.bobo.core.service 
+          
+          
+          
+#-------------redis配置-------------        
+redis:
+    host: 127.0.0.1
+    port: 6379
+    timeout: 100000
+    pool: 
+      max-total: 300
+      max-idle: 8
+      max-wait-millis: 1000
+      test-on-borrow: true
+      test-on-return: true  
+  
+server:
+    #springboot2.x多了servlet:
+    servlet:
+        port: 8080
+        context-path: /bobo-support-api

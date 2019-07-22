@@ -1,0 +1,16 @@
+package #package#;
+
+import com.bobo.framework.msg.RequestMsg;
+import com.bobo.framework.msg.ResponseMsg;
+
+/**
+ * @ClassName: #ServiceName#Service
+ * @Description: #Description#
+ * @author: #author#
+ * @date: #date#
+ */
+ 
+ public interface #ServiceName#Service{
+
+   #serviceMethod#
+}

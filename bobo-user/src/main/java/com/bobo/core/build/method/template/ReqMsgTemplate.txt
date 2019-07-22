@@ -1,0 +1,20 @@
+package #package#;
+
+import java.io.Serializable;
+/**
+ * @ClassName: #ClassName#Req
+ * @Description: #Description#   请求参数
+ * @author: #author#
+ * @date: #date#
+ */
+public class #ClassName#Req  implements Serializable
+{
+
+	/**
+	 * @fieldName: serialVersionUID
+	 * @fieldType: long
+	 * @Description: TODO
+	 */
+	private static final long serialVersionUID = 1L;
+
+}

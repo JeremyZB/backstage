@@ -1,0 +1,59 @@
+server:
+  port: 50880
+  servlet:
+    context-path: /login/
+    
+
+spring:
+  datasource:
+    name: druidDataSource
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    #你自己的数据库IP地址和数据库名，账号以及密码
+    url: jdbc:mysql://127.0.0.1:3306/bobo?useSSL=false&useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&failOverReadOnly=false
+    username: root
+    password: 123456
+    druid:
+      #监控统计拦截的过滤器 不加监控界面sql无法统计 wall用于防火墙
+      filters: stat,wall,log4j,config
+      #最大连接数
+      max-active: 100
+      #初始化大小
+      initial-size: 1
+      #获取连接最大等待时间
+      max-wait: 60000
+      min-idle: 1
+      #间隔多久检测一次需要关闭的空闲连接 毫秒
+      time-between-eviction-runs-millis: 60000
+      #连接在连接池中最小生存的时间，毫秒
+      min-evictable-idle-time-millis: 300000
+      validation-query: select 'x'
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      pool-prepared-statements: true
+      max-open-prepared-statements: 50
+      max-pool-prepared-statement-per-connection-size: 20
+ 
+dubbox: 
+    appName: bobo
+    address: 127.0.0.1:2181
+    protocalName: zookeeper
+    port: 50298
+    version: login
+    
+
+  #-------------redis配置-------------        
+redis:
+    host: 127.0.0.1
+    port: 6379
+    timeout: 100000
+    pool: 
+      max-total: 300
+      max-idle: 8
+      max-wait-millis: 1000
+      test-on-borrow: true
+      test-on-return: true 
+      
+application:
+    name: bobo           

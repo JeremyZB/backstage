@@ -1,0 +1,5 @@
+
+	 /**
+	 * @Description: #Description#
+	 */
+	public abstract ResponseMsg<#ClassName#Resp> #Method#(RequestMsg<#ClassName#Req> req);

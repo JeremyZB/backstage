@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bobo.core.mapper.master.UserOperateLogMapper">
+  <resultMap id="BaseResultMap" type="com.bobo.core.model.UserOperateLog">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="userId" jdbcType="INTEGER" property="userId" />
+    <result column="reqUrl" jdbcType="VARCHAR" property="reqUrl" />
+    <result column="reqParam" jdbcType="VARCHAR" property="reqParam" />
+    <result column="reqTime" jdbcType="BIGINT" property="reqTime" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="ip" jdbcType="VARCHAR" property="ip" />
+  </resultMap>
+</mapper>
